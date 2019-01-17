@@ -19,8 +19,8 @@ class ${itemAdapterClass}: RecyclerView.Adapter<${itemAdapterClass}.ViewHolder>(
         return items.size
     }
 
-    override fun onBindViewHolder(p0: ViewHolder, p1: Int) {
-        p0.bind(items[p1])
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        holder.bind(items[position])
     }
 
     fun setRecyclerData(data: List<DummyData>){
