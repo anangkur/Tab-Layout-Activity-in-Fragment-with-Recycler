@@ -6,13 +6,14 @@ import android.support.v7.app.AppCompatActivity
 
 class ${mainActivityClass}: AppCompatActivity(){
 
-    private lateinit var mViewBinding: ${mainActivityLayout}Binding
+    private lateinit var mViewBinding: ${mainActivityClass}Binding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mViewBinding = DataBindingUtil.setContentView(this, R.layout.${mainActivityLayout})
-
-        setupFragment()
+        mViewBinding.apply{
+            setupFragment()
+        }
     }
 
     private fun setupFragment(){

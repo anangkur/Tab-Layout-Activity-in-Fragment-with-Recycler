@@ -11,10 +11,10 @@ import kotlinx.android.synthetic.main.${mainFragmentLayout}.*
 
 class ${mainFragmentClass}: Fragment(){
 
-    private lateinit var mViewBinding: ${mainFragmentLayout}Binding
+    private lateinit var mViewBinding: ${mainFragmentClass}Binding
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        mViewBinding = ${mainFragmentLayout}Binding.inflate(inflater, container, false)
+        mViewBinding = ${mainFragmentClass}Binding.inflate(inflater, container, false)
         return mViewBinding.root
     }
 

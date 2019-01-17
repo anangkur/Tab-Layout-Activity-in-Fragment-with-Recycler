@@ -20,7 +20,7 @@
         type="string"
         constraints="layout|unique|nonempty"
         suggest="${activityToLayout(mainActivityName)}"
-        default="activity_main"
+        default="main_activity"
         help="The name of the layout to create for the activity" />
 
     <parameter
@@ -36,7 +36,7 @@
         name="Fragment Layout Name"
         type="string"
         constraints="layout|unique|nonempty"
-        default="fragment_main"
+        default="main_fragment"
         help="The name of the layout to create for the activity" />
 
     <parameter
@@ -44,7 +44,7 @@
         name="Fragment Name"
         type="string"
         constraints="class|unique|nonempty"
-        default="TabFragment"
+        default="MainTabFragment"
         help="The name of the fragment class to create" />
 
     <parameter
@@ -52,7 +52,7 @@
         name="Tab Fragment Layout Name"
         type="string"
         constraints="layout|unique|nonempty"
-        default="fragment_tab"
+        default="main_tab_fragment"
         help="The name of the layout to create for the activity" />
 
     <parameter
@@ -68,7 +68,7 @@
         name="item Layout Name"
         type="string"
         constraints="layout|unique|nonempty"
-        default="item_main"
+        default="main_item"
         help="The name of the item layout" />
 
     <parameter

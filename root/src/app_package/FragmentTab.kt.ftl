@@ -12,12 +12,12 @@ import kotlinx.android.synthetic.main.${tabFragmentLayout}.*
 
 class ${tabFragmentClass}: Fragment(){
 
-    private lateinit var mViewBinding: ${tabFragmentLayout}Binding
+    private lateinit var mViewBinding: ${tabFragmentClass}Binding
     private lateinit var mAdapter: ${itemAdapterClass}
     private lateinit var mViewModel: ${viewModelClass}
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        mViewBinding = ${tabFragmentLayout}Binding.inflate(inflater, container, false)
+        mViewBinding = ${tabFragmentClass}Binding.inflate(inflater, container, false)
         mViewBinding.apply {
             mViewModel = ${viewModelClass}()
             mViewModel.apply {

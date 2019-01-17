@@ -10,8 +10,9 @@ class ${itemAdapterClass}: RecyclerView.Adapter<${itemAdapterClass}.ViewHolder>(
 
     private val items: ArrayList<DummyData> = ArrayList()
 
-    override fun onCreateViewHolder(p0: ViewGroup, p1: Int): ViewHolder {
-        return ViewHolder(LayoutInflater.from(p0.context).inflate(R.layout.${itemLayout}, p0, false))
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        val itemBinding: ${itemLayout}Binding = DataBindingUtil.inflate(LayoutInflater.from(parent.context), R.layout.${itemLayout}, parent, false)
+        return ViewHolder(itemBinding)
     }
 
     override fun getItemCount(): Int {
@@ -28,7 +29,7 @@ class ${itemAdapterClass}: RecyclerView.Adapter<${itemAdapterClass}.ViewHolder>(
         notifyDataSetChanged()
     }
 
-    class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
+    class ViewHolder(itemBinding: ${itemLayout}Binding): RecyclerView.ViewHolder(itemBinding.root){
         fun bind(dummyData: DummyData){
             itemView.tv_item.text = dummyData.data
         }
